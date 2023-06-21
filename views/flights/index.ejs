@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+
+<%= vmi %>
+
+
+<% flights.forEach(function(f) { %>
+
+  <tr>
+    <td><%= f.airline %></td>
+    <td><%= f.airport %></td>
+    <td><%= f.flightNo %></td>
+     <td><%= f.departs %></td> 
+  </tr>
+
+
+
+<% }) %>
+
+<%- include('../partials/footer') %>
