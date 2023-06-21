@@ -4,6 +4,7 @@ const Flight = require('../models/flights')
 module.exports = {
   index,
   new: newFlight,
+  create,
 }
 
 
@@ -19,4 +20,11 @@ function newFlight(req,res){
   res.render('flights/new' , {errosMgg: ''})
 }
 
-
+async function create(req,res){
+  try{
+    await Flight.create(req.body)
+    res.redirect('/flights')
+  } catch(err){
+    res.render('flights/new', {errorMsg: err.message})
+  }
+}

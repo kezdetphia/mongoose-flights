@@ -1,17 +1,19 @@
 <%- include('../partials/header') %>
 
 
-<%= vmi %>
-
-
 <% flights.forEach(function(f) { %>
 
   <tr>
-    <td><%= f.airline %></td>
-    <td><%= f.airport %></td>
-    <td><%= f.flightNo %></td>
-     <td><%= f.departs %></td> 
+    <td>Airline : <%= f.airline %></td>
+    <br>
+    <td>Airport : <%= f.airport %></td>
+    <br>
+    <td>Flight Number : <%= f.flightNo %></td>
+    <br>
+     <td>Departs : <%= f.departs %></td> 
   </tr>
+  <hr>
+  
 
 
 
